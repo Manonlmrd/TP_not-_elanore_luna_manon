@@ -1,217 +1,323 @@
+
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Contactez-nous — ISEN Ouest (reproduction)</title>
-	<link href="style.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contactez-nous — ISEN Ouest</title>
+  <link href="style.css" rel="stylesheet">
 </head>
+
 <body>
 
-<header class="header-isen">
-  <div class="header-container">
-    <!-- Logo -->
-    <a href="/" class="header-logo">
-      <img src="https://isen-ouest.fr/wp-content/uploads/2024/07/15/logo-isen-couleur.png" alt="ISEN Ouest">
-    </a>
+  <!-- HEADER -->
+  <header class="header-isen">
+    <div class="header-container">
 
-    <!-- Navbar -->
-    <nav class="header-nav">
-      <ul>
-        <li><a href="#">Liens à venir</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+      <!-- Logo -->
+      <a href="index.html" class="header-logo">
+        <img src="https://isen-ouest.fr/wp-content/uploads/2024/07/15/logo-isen-couleur.png"
+             alt="ISEN Ouest">
+      </a>
 
-  <div class="contact-card" aria-labelledby="contact-title">
-    <h1 id="contact-title">Contactez-nous</h1>
+      <!-- Navigation -->
+      <nav class="header-nav">
+        <ul>
+          <li><a href="devenir-inge.html">Devenir ingénieur</a></li>
+          <li><a href="#">Formations</a></li>
+          <li><a href="#">Cycle Post-bac</a></li>
+          <li><a href="#">Apprentissage</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
 
-    <!-- Intro / notice (copie du texte visible sur la page) -->
-    <p class="lead">
-      Remplissez le formulaire ci-dessous pour nous envoyer votre demande.
-    </p>
+    </div>
+  </header>
 
-    <div class="notice">
-      « * » indique les champs nécessaires
+  <main>
+
+    <!-- FIL D'ARIANE -->
+    <div class="breadcrumb">
+      <a href="index.html">Accueil</a>
+      <span>›</span>
+      <strong>Contact</strong>
+      <div class="breadcrumb-line"></div>
     </div>
 
-    <form class="contact-form" action="#" method="post" novalidate>
-      <!-- Vous êtes ? (profil) -->
-      <div class="form-row w-100">
-        <div style="width:100%;">
-          <label class="field-label" for="profile">Vous êtes ? *</label>
-          <select id="profile" name="profile" required>
-            <option value="">Sélectionnez votre profil</option>
-            <option>Particulier</option>
-            <option>Professionnel</option>
-            <option>Chercheur</option>
-            <option>Étudiant étranger</option>
-            <option>Journaliste</option>
-            <option>Prestataire</option>
-            <option>Autre</option>
-          </select>
-        </div>
+    <!-- FORMULAIRE CONTACT -->
+    <div class="contact-card" aria-labelledby="contact-title">
+
+      <h1 id="contact-title">Contactez-nous</h1>
+
+      <p class="lead">
+        Remplissez le formulaire ci-dessous pour nous envoyer votre demande.
+      </p>
+
+      <div class="notice">
+        « * » indique les champs nécessaires
       </div>
 
-      <!-- Société (optionnel) -->
-      <div class="form-row w-100">
-        <div style="width:100%;">
-          <label class="field-label" for="company">Société</label>
-          <input id="company" name="company" type="text" placeholder="Nom de la société">
-        </div>
-      </div>
+      <form class="contact-form" action="#" method="post">
 
-      <!-- Civilité -->
-      <div class="form-row w-100">
-        <div style="width:100%;">
-          <label class="field-label">Civilité *</label>
-          <div class="inline-group" role="radiogroup" aria-labelledby="civ-label">
-            <label><input type="radio" name="civ" value="Mme" required> Madame</label>
-            <label><input type="radio" name="civ" value="M."> Monsieur</label>
-            <label><input type="radio" name="civ" value="Autre"> Autre</label>
+        <!-- Profil -->
+        <div class="form-row w-100">
+          <div class="field-full">
+            <label class="field-label" for="profile">
+              Vous êtes ? *
+            </label>
+
+            <select id="profile" name="profile" required>
+              <option value="">Sélectionnez votre profil</option>
+              <option>Particulier</option>
+              <option>Professionnel</option>
+              <option>Chercheur</option>
+              <option>Étudiant étranger</option>
+              <option>Journaliste</option>
+              <option>Prestataire</option>
+              <option>Autre</option>
+            </select>
           </div>
         </div>
-      </div>
 
-      <!-- Prénom / Nom -->
-      <div class="form-row row-2col w-100">
-        <div class="col">
-          <label class="field-label" for="firstname">Prénom *</label>
-          <input id="firstname" name="firstname" type="text" required>
+        <!-- Société -->
+        <div class="form-row w-100">
+          <div class="field-full">
+            <label class="field-label" for="company">
+              Société
+            </label>
+
+            <input id="company" name="company"
+                   type="text"
+                   placeholder="Nom de la société">
+          </div>
         </div>
-        <div class="col">
-          <label class="field-label" for="lastname">Nom *</label>
-          <input id="lastname" name="lastname" type="text" required>
+
+        <!-- Civilité -->
+        <div class="form-row w-100">
+          <fieldset class="civility-fieldset">
+            <legend class="field-label">Civilité *</legend>
+
+            <div class="inline-group">
+              <label>
+                <input type="radio" name="civ" value="Mme" required>
+                Madame
+              </label>
+
+              <label>
+                <input type="radio" name="civ" value="M.">
+                Monsieur
+              </label>
+
+              <label>
+                <input type="radio" name="civ" value="Autre">
+                Autre
+              </label>
+            </div>
+          </fieldset>
         </div>
-      </div>
 
-      <!-- Email / Confirm email -->
-      <div class="form-row row-2col w-100">
-        <div class="col">
-          <label class="field-label" for="email">Email *</label>
-          <input id="email" name="email" type="email" placeholder="Saisissez un e-mail" required>
+        <!-- Prénom / Nom -->
+        <div class="form-row row-2col w-100">
+
+          <div class="col">
+            <label class="field-label" for="firstname">
+              Prénom *
+            </label>
+            <input id="firstname" name="firstname"
+                   type="text" required>
+          </div>
+
+          <div class="col">
+            <label class="field-label" for="lastname">
+              Nom *
+            </label>
+            <input id="lastname" name="lastname"
+                   type="text" required>
+          </div>
+
         </div>
-        <div class="col">
-          <label class="field-label" for="email2">Confirmez l’e-mail *</label>
-          <input id="email2" name="email2" type="email" placeholder="Confirmez l’e-mail" required>
+
+        <!-- Email -->
+        <div class="form-row row-2col w-100">
+
+          <div class="col">
+            <label class="field-label" for="email">
+              Email *
+            </label>
+            <input id="email" name="email"
+                   type="email"
+                   placeholder="Saisissez un e-mail"
+                   required>
+          </div>
+
+          <div class="col">
+            <label class="field-label" for="email2">
+              Confirmez l’e-mail *
+            </label>
+            <input id="email2" name="email2"
+                   type="email"
+                   placeholder="Confirmez l’e-mail"
+                   required>
+          </div>
+
         </div>
-      </div>
 
-      <!-- Téléphone -->
-      <div class="form-row w-100">
-        <div style="width:100%;">
-          <label class="field-label" for="phone">Téléphone *</label>
-          <input id="phone" name="phone" type="tel" placeholder="+33 6 12 34 56 78" required>
+        <!-- Téléphone -->
+        <div class="form-row w-100">
+          <div class="field-full">
+            <label class="field-label" for="phone">
+              Téléphone *
+            </label>
+            <input id="phone" name="phone"
+                   type="tel"
+                   placeholder="+33 6 12 34 56 78"
+                   required>
+          </div>
         </div>
-      </div>
 
-      <!-- Objet -->
-      <div class="form-row w-100">
-        <div style="width:100%;">
-          <label class="field-label" for="subject">Objet *</label>
-          <select id="subject" name="subject" required>
-            <option value="">Sélectionnez l'objet de votre demande</option>
-            <option>Demande d'information</option>
-            <option>Relations entreprises</option>
-            <option>International</option>
-            <option>Recherche</option>
-            <option>Service communication</option>
-            <option>Contact presse</option>
-            <option>Autre demande</option>
-          </select>
+        <!-- Objet -->
+        <div class="form-row w-100">
+          <div class="field-full">
+            <label class="field-label" for="subject">
+              Objet *
+            </label>
+
+            <select id="subject" name="subject" required>
+              <option value="">
+                Sélectionnez l'objet de votre demande
+              </option>
+              <option>Demande d'information</option>
+              <option>Relations entreprises</option>
+              <option>International</option>
+              <option>Recherche</option>
+              <option>Service communication</option>
+              <option>Contact presse</option>
+              <option>Autre demande</option>
+            </select>
+          </div>
         </div>
-      </div>
 
-      <!-- Message -->
-      <div class="form-row w-100">
-        <div style="width:100%;">
-          <label class="field-label" for="message">Message *</label>
-          <textarea id="message" name="message" required placeholder="Votre message..."></textarea>
+        <!-- Message -->
+        <div class="form-row w-100">
+          <div class="field-full">
+            <label class="field-label" for="message">
+              Message *
+            </label>
+
+            <textarea id="message" name="message"
+                      placeholder="Votre message..."
+                      required></textarea>
+          </div>
         </div>
-      </div>
 
-      <!-- Communication opt-in -->
-      <div class="form-row w-100">
-        <label class="inline-group" for="comm">
-          <input id="comm" name="comm" type="checkbox"> J’accepte de recevoir des informations de la part de ISEN Ouest.
-        </label>
-      </div>
+        <!-- Communication -->
+        <div class="form-row w-100">
+          <label class="checkbox-label">
+            <input id="comm" name="comm" type="checkbox">
+            J’accepte de recevoir des informations de la part de ISEN Ouest.
+          </label>
+        </div>
 
-      <!-- Consentement -->
-      <div class="form-row w-100">
-        <label class="inline-group" for="consent">
-          <input id="consent" name="consent" type="checkbox" required> J’accepte la <a class="helper-link" href="https://isen-ouest.fr/politique-de-confidentialite/" target="_blank" rel="noopener">politique de confidentialité</a>.
-        </label>
-      </div>
+        <!-- Confidentialité -->
+        <div class="form-row w-100">
+          <label class="checkbox-label">
+            <input id="consent" name="consent"
+                   type="checkbox" required>
+            J’accepte la
+            <a class="helper-link"
+               href="https://isen-ouest.fr/politique-de-confidentialite/"
+               target="_blank" rel="noopener">
+              politique de confidentialité
+            </a>.
+          </label>
+        </div>
 
-      <!-- Anti-spam honeypot (invisible to users) -->
-      <div class="hp" aria-hidden="true">
-        <label for="company_hp">Company</label>
-        <input id="company_hp" name="company_hp" type="text" value="">
-      </div>
+        <!-- Anti-spam -->
+        <div class="hp" aria-hidden="true">
+          <label for="company_hp">Company</label>
+          <input id="company_hp" name="company_hp"
+                 type="text" tabindex="-1" autocomplete="off">
+        </div>
 
-      <!-- Actions -->
-      <div class="actions">
-        <button type="submit" class="btn-primary">Envoyer</button>
-      </div>
+        <!-- Bouton -->
+        <div class="actions">
+          <button type="submit" class="btn-primary">
+            Envoyer
+          </button>
+        </div>
 
-      <!-- Data processing note -->
-      <p class="small-note" style="margin-top:12px;">
-        Nous traitons les données recueillies pour répondre à votre demande. Pour en savoir plus sur la gestion de vos données personnelles et pour exercer vos droits, reportez-vous à la <a class="helper-link" href="https://isen-ouest.fr/politique-de-confidentialite/" target="_blank" rel="noopener">politique de confidentialité</a>.
-      </p>
-    </form>
-  </div>
-<footer class="site-footer">
-  <div class="footer-container">
+        <!-- Informations RGPD -->
+        <p class="small-note">
+          Nous traitons les données recueillies pour répondre
+          à votre demande. Pour en savoir plus sur la gestion
+          de vos données personnelles et pour exercer vos droits,
+          reportez-vous à la
+          <a class="helper-link"
+             href="https://isen-ouest.fr/politique-de-confidentialite/"
+             target="_blank" rel="noopener">
+            politique de confidentialité
+          </a>.
+        </p>
 
-    <!-- Colonne 1 : Logo + bouton -->
-    <div class="footer-col footer-col-logo">
-      <img src="https://isen-ouest.fr/wp-content/uploads/2024/07/15/logo-isen-blanc.svg" 
-           alt="ISEN Ouest" class="footer-logo">
-      <a href="ACOMPLETER" class="btn-contact">Nous contacter</a>
+      </form>
     </div>
 
-    <!-- Zone titres + colonnes 2-4 -->
-    <div class="footer-links-section">
-      <!-- Titre général -->
-      <p class="footer-cities">Brest - Caen - Nantes - Paris - Rennes</p>
+  </main>
 
-      <!-- Colonnes de liens -->
-      <div class="footer-links-container">
-        <!-- Colonne 2 : Devenir ingénieur -->
-        <div class="footer-col">
-          <h3>Devenir ingénieur</h3>
-          <ul>
-            <li><a href="ACOMPLETER">Cycle post-bac</a></li>
-            <li><a href="ACOMPLETER">Formation d'ingénieur</a></li>
-            <li><a href="ACOMPLETER">Apprentissage</a></li>
-          </ul>
-        </div>
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-container">
 
-        <!-- Colonne 3 : Entreprises -->
-        <div class="footer-col">
-          <h3>Entreprises</h3>
-          <ul>
-            <li><a href="https://isen-ouest.fr/entreprises/recruter/">Recruter un étudiant</a></li>
-            <li><a href="https://isen-ouest.fr/labisen-la-recherche/la-recherche-partenariale/">Recherche partenariale</a></li>
-            <li><a href="http://isen-ouest.fr/taxe-d-apprentissage">Taxe d'apprentissage</a></li>
-          </ul>
-        </div>
+      <div class="footer-col footer-col-logo">
+        <img src="https://isen-ouest.fr/wp-content/uploads/2024/07/15/logo-isen-blanc.svg"
+             alt="ISEN Ouest" class="footer-logo">
 
-        <!-- Colonne 4 : Étudiants -->
-        <div class="footer-col">
-          <h3>Étudiants</h3>
-          <ul>
-            <li><a href="https://isen-ouest.fr/infos-pratiques/">Informations pratiques</a></li>
-            <li><a href="http://isen-ouest.fr/sportifs">Sportifs</a></li>
-            <li><a href="http://isen-ouest.fr/alumni-aiisen">Alumni AIISEN</a></li>
-          </ul>
+        <a href="contact.html" class="btn-contact">
+          Nous contacter
+        </a>
+      </div>
+
+      <div class="footer-links-section">
+
+        <p class="footer-cities">
+          Brest - Caen - Nantes - Paris - Rennes
+        </p>
+
+        <div class="footer-links-container">
+
+          <div class="footer-col">
+            <h3>Devenir ingénieur</h3>
+            <ul>
+              <li><a href="#">Cycle post-bac</a></li>
+              <li><a href="devenir-inge.html">Formation d'ingénieur</a></li>
+              <li><a href="#">Apprentissage</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h3>Entreprises</h3>
+            <ul>
+              <li><a href="https://isen-ouest.fr/entreprises/recruter/">Recruter un étudiant</a></li>
+              <li><a href="https://isen-ouest.fr/labisen-la-recherche/la-recherche-partenariale/">Recherche partenariale</a></li>
+              <li><a href="http://isen-ouest.fr/taxe-d-apprentissage">Taxe d'apprentissage</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h3>Étudiants</h3>
+            <ul>
+              <li><a href="https://isen-ouest.fr/infos-pratiques/">Informations pratiques</a></li>
+              <li><a href="http://isen-ouest.fr/sportifs">Sportifs</a></li>
+              <li><a href="http://isen-ouest.fr/alumni-aiisen">Alumni AIISEN</a></li>
+            </ul>
+          </div>
+
         </div>
       </div>
     </div>
-  </div>
-</footer>
+  </footer>
+
 </body>
 </html>
 
